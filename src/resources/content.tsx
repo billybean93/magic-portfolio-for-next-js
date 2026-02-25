@@ -1,49 +1,28 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Ngoc",
-  lastName: "Nguyen",
-  name: `Ngoc Nguyen`,
-  role: "Business Analyst",
-  avatar: "/images/avatar.jpeg",
-  email: "nphongngoc@gmail.com",
-  location: "Asia/Ho_Chi_Minh", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Vietnamese"], // optional: Leave the array empty if you don't want to display languages
+  lastName: "Nguyen Phan Hong",
+  name: "Nguyen Phan Hong Ngoc",
+  role: "Investment Analyst (VC/PE Track)",
+  avatar: "/images/branding/avatar-ngoc.png",
+  email: "nphongngocc@gmail.com",
+  location: "Asia/Ho_Chi_Minh",
+  languages: ["English (IELTS 7.0)", "Vietnamese", "Chinese (Elementary)"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Updates on investment research, valuation, and market insights.</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/TODO-update-linkedin",
     essential: true,
   },
   {
@@ -56,28 +35,30 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/ngoc-portfolio-cover.png",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  description: `Portfolio website showcasing ${person.name}'s work in investment analysis and finance.`,
+  headline: <>Investment research, valuation, and data-backed decision support</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Business Analyst</strong>{" "}
+        <strong className="ml-4">VC/PE Portfolio</strong>
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Featured case study
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/industry-research",
   },
   subline: (
     <>
-    I'm Ngoc, a business analyst at <Text as="span" size="xl" weight="strong">God</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I am Ngoc, an investment analyst with hands-on experience in market research, valuation,
+      and deal screening. I focus on translating complex financial and industry data into clear
+      investment recommendations.
+    </>
   ),
 };
 
@@ -85,7 +66,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from Ho Chi Minh City.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,144 +75,149 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Aspiring VC/PE professional with practical investment experience across fintech,
+        health-tech, agritech, logistics, F&B, and proptech. I bring a data-driven approach to
+        sector research, deal evaluation, and financial modeling, with a track record of supporting
+        fundraising and strategic portfolio decisions.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Professional Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "TNB Aura",
+        timeframe: "Jun 2024 - Jan 2025",
+        role: "Investment Analyst Intern",
         achievements: [
-          <>
-            {/* eslint-disable-next-line react/react-in-jsx-scope */}
-
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            {/* eslint-disable-next-line react/react-in-jsx-scope */}
-
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          {
+            key: "tnb-1",
+            description: (
+              <>Conducted market and sector analysis aligned with fund thesis across 5 industries.</>
+            ),
+          },
+          {
+            key: "tnb-2",
+            description: (
+              <>
+                Sourced 10 potential deals, evaluated merits and risks, and presented recommendations
+                to senior stakeholders.
+              </>
+            ),
+          },
+          {
+            key: "tnb-3",
+            description: (
+              <>
+                Built valuation models and due diligence materials supporting a US$24M Series A raise
+                at a US$60M pre-money valuation.
+              </>
+            ),
+          },
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/ngoc/industry-research.png",
+            alt: "Investment research and valuation work",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "IQI Vietnam",
+        timeframe: "Apr 2022 - Jun 2024",
+        role: "Personal Assistant to Partner and Director of M&A",
         achievements: [
-          <>
-            {/* eslint-disable-next-line react/react-in-jsx-scope */}
-
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            {/* eslint-disable-next-line react/react-in-jsx-scope */}
-
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          {
+            key: "iqi-pa-1",
+            description: (
+              <>Prepared 16 property investment teasers and proposals across multiple asset classes.</>
+            ),
+          },
+          {
+            key: "iqi-pa-2",
+            description: (
+              <>
+                Researched project economics, market comparables, and return simulations for investment
+                feasibility assessments.
+              </>
+            ),
+          },
+        ],
+        images: [],
+      },
+      {
+        company: "IQI Vietnam",
+        timeframe: "Mar 2022 - Mar 2023",
+        role: "Residential and Leasing Real Estate Consultant",
+        achievements: [
+          {
+            key: "iqi-consult-1",
+            description: (
+              <>
+                Advised individual investors on cash-flow plans, project comparisons, and regional
+                market dynamics.
+              </>
+            ),
+          },
+          {
+            key: "iqi-consult-2",
+            description: <>Closed 3 transactions totaling approximately VND 7.7 billion.</>,
+          },
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
         name: "RMIT University Vietnam",
-        description: <>Studied Economics and Finance.</>,
+        description: <>Bachelor's Degree in Economics and Finance (Oct 2021 - Jan 2025).</>,
       },
-      
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Skills",
     skills: [
       {
-        title: "R",
-        description: (
-          <>Able to do something with R.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          // {
-          //   src: "/images/projects/project-01/cover-02.jpg",
-          //   alt: "Project image",
-          //   width: 16,
-          //   height: 9,
-          // },
-          // {
-          //   src: "/images/projects/project-01/cover-03.jpg",
-          //   alt: "Project image",
-          //   width: 16,
-          //   height: 9,
-          // },
-        ],
+        title: "Investment Analysis",
+        description: <>Deal screening, thesis fit assessment, and risk-reward evaluation.</>,
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Financial Modeling",
+        description: <>
+          DCF/comparable valuation, scenario analysis, return simulations, and model structuring.
+        </>,
+      },
+      {
+        title: "Industry Research",
+        description: <>Market sizing, competitive analysis, trend mapping, and benchmark studies.</>,
+      },
+      {
+        title: "Portfolio Monitoring",
+        description: <>Performance tracking and strategic support for portfolio companies.</>,
+      },
+      {
+        title: "BI and Analytics",
+        description: <>Data analysis and insight synthesis for business recommendations.</>,
+      },
+      {
+        title: "Communication",
+        description: <>Investment memo writing and stakeholder-ready presentation delivery.</>,
       },
     ],
   },
@@ -240,70 +226,23 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Blog",
+  description: `Insights and notes by ${person.name}`,
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  title: `Projects - ${person.name}`,
+  description: `Investment projects and analysis by ${person.name}`,
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  title: `Gallery - ${person.name}`,
+  description: `Gallery by ${person.name}`,
+  images: [],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };

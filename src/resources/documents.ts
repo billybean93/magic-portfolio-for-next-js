@@ -1,0 +1,223 @@
+export type DocumentCategory =
+  | "Industry Research"
+  | "Financial Modeling"
+  | "Academic Report"
+  | "Competition";
+
+export type PortfolioDocument = {
+  title: string;
+  cardTitle?: string;
+  category: DocumentCategory;
+  type: "pdf" | "xlsx" | "certificate";
+  sizeMB: number;
+  href: string;
+  external: boolean;
+  featured: boolean;
+};
+
+export const documents: PortfolioDocument[] = [
+  {
+    title: "Edtech Research Calculation",
+    category: "Industry Research",
+    type: "xlsx",
+    sizeMB: 0.29,
+    href: "/files/industry-research/edtech-research-calculation.xlsx",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "Proptech Research",
+    category: "Industry Research",
+    type: "pdf",
+    sizeMB: 0.87,
+    href: "/files/industry-research/proptech-research.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "Edtech Research",
+    category: "Industry Research",
+    type: "pdf",
+    sizeMB: 1.42,
+    href: "/files/industry-research/edtech-research.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "FPT Corp Valuation 2025",
+    category: "Financial Modeling",
+    type: "xlsx",
+    sizeMB: 0.49,
+    href: "/files/financial-modeling/fpt-corp-valuation-2025.xlsx",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "Investment Summary - Proj Model",
+    category: "Financial Modeling",
+    type: "pdf",
+    sizeMB: 0.83,
+    href: "/files/financial-modeling/investment-summary-proj-model.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "FRT Valuation Model 2023",
+    category: "Financial Modeling",
+    type: "xlsx",
+    sizeMB: 0.39,
+    href: "/files/financial-modeling/frt-valuation-model-2023.xlsx",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "Proj Studio - Model",
+    category: "Financial Modeling",
+    type: "xlsx",
+    sizeMB: 15.94,
+    href: "/files/financial-modeling/proj-studio-model.xlsx",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "POVERTY GAP 2018",
+    cardTitle: "Poverty Gap (2018)",
+    category: "Academic Report",
+    type: "pdf",
+    sizeMB: 0.41,
+    href: "/files/academic-reports/poverty-gap-2018.pdf",
+    external: false,
+    featured: false,
+  },
+  {
+    title: "HDI and Its Dependent Variables",
+    cardTitle: "HDI Dependent Variables",
+    category: "Academic Report",
+    type: "pdf",
+    sizeMB: 0.57,
+    href: "/files/academic-reports/hdi-and-dependent-variables.pdf",
+    external: false,
+    featured: false,
+  },
+  {
+    title: "Case Study on Shrimp and Silver Price Changes 1994-2020",
+    cardTitle: "Shrimp & Silver Prices (1994-2020)",
+    category: "Academic Report",
+    type: "pdf",
+    sizeMB: 0.53,
+    href: "/files/academic-reports/shrimp-and-silver-price-case-study.pdf",
+    external: false,
+    featured: false,
+  },
+  {
+    title: "Policy Advocacy Newsletter",
+    cardTitle: "Policy Advocacy Newsletter",
+    category: "Academic Report",
+    type: "pdf",
+    sizeMB: 0.86,
+    href: "/files/academic-reports/policy-advocacy-newsletter.pdf",
+    external: false,
+    featured: false,
+  },
+  {
+    title: "Report Analysis on U.S Stock Market Simulator",
+    cardTitle: "U.S. Stock Market Simulator",
+    category: "Academic Report",
+    type: "pdf",
+    sizeMB: 1.93,
+    href: "/files/academic-reports/us-stock-market-simulator-report.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "Austria Weather Prediction",
+    cardTitle: "Austria Weather Prediction",
+    category: "Academic Report",
+    type: "pdf",
+    sizeMB: 1.52,
+    href: "/files/academic-reports/austria-weather-prediction.pdf",
+    external: false,
+    featured: false,
+  },
+  {
+    title: "FRT Valuation",
+    cardTitle: "FRT Valuation",
+    category: "Academic Report",
+    type: "pdf",
+    sizeMB: 3.84,
+    href: "/files/academic-reports/frt-valuation.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "Vietnam Property Report - 2023",
+    cardTitle: "Vietnam Property Report (2023)",
+    category: "Academic Report",
+    type: "pdf",
+    sizeMB: 10.54,
+    href: "/files/academic-reports/vietnam-property-report-2023.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "RBAC 2023 Certificate",
+    category: "Competition",
+    type: "certificate",
+    sizeMB: 0.37,
+    href: "/files/competition/rbac-2023-certificate.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "R-Boolean Aces R3 RBAC2023 Finale",
+    category: "Competition",
+    type: "pdf",
+    sizeMB: 34.93,
+    href: "/files/competition/r-boolean-aces-r3-rbac2023-finale.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "R-Boolean Aces R2 RBAC2023",
+    category: "Competition",
+    type: "pdf",
+    sizeMB: 12.5,
+    href: "/files/competition/r-boolean-aces-r2-rbac2023.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "RRC2022 Report Submission",
+    category: "Competition",
+    type: "pdf",
+    sizeMB: 4.89,
+    href: "/files/competition/rrc2022-report-submission.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "RRC 2022 Certificate",
+    category: "Competition",
+    type: "certificate",
+    sizeMB: 55.94,
+    href: "/files/competition/rrc-2022-certificate.pdf",
+    external: false,
+    featured: true,
+  },
+  {
+    title: "RRC2022 Presentation Submission",
+    category: "Competition",
+    type: "pdf",
+    sizeMB: 4.94,
+    href: "/files/competition/rrc2022-presentation-submission.pdf",
+    external: false,
+    featured: true,
+  },
+];
+
+export const documentCategories: DocumentCategory[] = [
+  "Industry Research",
+  "Financial Modeling",
+  "Academic Report",
+  "Competition",
+];

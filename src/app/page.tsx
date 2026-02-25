@@ -1,20 +1,20 @@
+import { Mailchimp } from "@/components";
+import { Posts } from "@/components/blog/Posts";
+import { Projects } from "@/components/work/Projects";
+import { about, baseURL, home, person, routes } from "@/resources";
 import {
-  Heading,
-  Text,
-  Button,
   Avatar,
-  RevealFx,
-  Column,
   Badge,
+  Button,
+  Column,
+  Heading,
+  Line,
+  Meta,
+  RevealFx,
   Row,
   Schema,
-  Meta,
-  Line,
+  Text,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
-import { Projects } from "@/components/work/Projects";
-import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -98,8 +98,72 @@ export default function Home() {
               </Row>
             </Button>
           </RevealFx>
+          <RevealFx paddingTop="8" delay={0.45} horizontal="center" paddingLeft="12">
+            <Button
+              id="resume"
+              data-border="rounded"
+              href="/files/resume/nguyen-phan-hong-ngoc-resume.docx"
+              variant="tertiary"
+              size="m"
+              weight="default"
+              arrowIcon
+            >
+              Download Resume
+            </Button>
+          </RevealFx>
         </Column>
       </Column>
+      <RevealFx translateY="12" delay={0.5} fillWidth>
+        <Column fillWidth gap="16" paddingX="l">
+          <Heading as="h2" variant="heading-strong-l">
+            Recruiter Snapshot
+          </Heading>
+          <Row fillWidth gap="12" s={{ direction: "column" }}>
+            <Column
+              fillWidth
+              border="neutral-alpha-medium"
+              radius="m"
+              padding="16"
+              background="surface"
+              gap="4"
+            >
+              <Text variant="label-strong-s">Focus</Text>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                VC/PE-track analyst with hands-on work in deal screening, industry research, and
+                valuation.
+              </Text>
+            </Column>
+            <Column
+              fillWidth
+              border="neutral-alpha-medium"
+              radius="m"
+              padding="16"
+              background="surface"
+              gap="4"
+            >
+              <Text variant="label-strong-s">Core Evidence</Text>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                4 flagship case studies, 20 supporting documents, and finalist outcomes in national
+                research/analytics competitions.
+              </Text>
+            </Column>
+            <Column
+              fillWidth
+              border="neutral-alpha-medium"
+              radius="m"
+              padding="16"
+              background="surface"
+              gap="4"
+            >
+              <Text variant="label-strong-s">Value to Team</Text>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                Converts complex market and financial data into concise recommendations executives can
+                act on quickly.
+              </Text>
+            </Column>
+          </Row>
+        </Column>
+      </RevealFx>
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>

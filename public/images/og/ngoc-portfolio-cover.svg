@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Ngoc portfolio cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b132b"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="80" r="220" fill="#ffffff" fill-opacity="0.07"/>
+  <circle cx="180" cy="560" r="240" fill="#67e8f9" fill-opacity="0.08"/>
+  <text x="90" y="260" fill="#e2e8f0" font-family="Geist, Arial, sans-serif" font-size="64" font-weight="700">Nguyen Phan Hong Ngoc</text>
+  <text x="90" y="330" fill="#bae6fd" font-family="Geist, Arial, sans-serif" font-size="36">Investment Analyst Portfolio</text>
+  <text x="90" y="398" fill="#a5f3fc" font-family="Geist, Arial, sans-serif" font-size="28">Industry Research • Financial Modeling • Competition Work</text>
+</svg>

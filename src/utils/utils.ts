@@ -14,11 +14,24 @@ type Metadata = {
   subtitle?: string;
   publishedAt: string;
   summary: string;
+  highlights?: string[];
+  atAGlance?: Array<{
+    label: string;
+    value: string;
+  }>;
   image?: string;
   images: string[];
   tag?: string;
   team: Team[];
   link?: string;
+  category?: "Industry Research" | "Financial Modeling" | "Academic Report" | "Competition";
+  deliverables?: Array<{
+    title: string;
+    href: string;
+    sizeMB?: number;
+    external?: boolean;
+    type?: "pdf" | "xlsx" | "certificate";
+  }>;
 };
 
 import { notFound } from "next/navigation";
@@ -44,11 +57,15 @@ function readMDXFile(filePath: string) {
     subtitle: data.subtitle || "",
     publishedAt: data.publishedAt,
     summary: data.summary || "",
+    highlights: data.highlights || [],
+    atAGlance: data.atAGlance || [],
     image: data.image || "",
     images: data.images || [],
     tag: data.tag || [],
     team: data.team || [],
     link: data.link || "",
+    category: data.category || undefined,
+    deliverables: data.deliverables || [],
   };
 
   return { metadata, content };

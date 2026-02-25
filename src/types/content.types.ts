@@ -1,5 +1,5 @@
-import { IconName } from "@/resources/icons";
-import { zones } from "tzdata";
+import type { IconName } from "@/resources/icons";
+import type { zones } from "tzdata";
 
 /**
  * IANA time zone string (e.g., 'Asia/Calcutta', 'Europe/Vienna').
@@ -151,7 +151,12 @@ export interface About extends BasePageConfig {
       /** Role or job title */
       role: string;
       /** Achievements at the company */
-      achievements: React.ReactNode[];
+      achievements: Array<{
+        /** Unique key for the achievement */
+        key: string;
+        /** Achievement description */
+        description: React.ReactNode;
+      }>;
       /** Images related to the experience */
       images?: Array<{
         /** Image source path */

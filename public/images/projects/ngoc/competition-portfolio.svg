@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Competition Portfolio cover">
+  <rect width="1600" height="900" fill="#052e16"/>
+  <rect x="90" y="110" width="1420" height="680" rx="24" fill="#166534"/>
+  <circle cx="460" cy="460" r="180" fill="#fef08a"/>
+  <polygon points="460,300 505,420 635,420 530,500 570,620 460,545 350,620 390,500 285,420 415,420" fill="#f59e0b"/>
+  <text x="760" y="430" fill="#dcfce7" font-family="Geist, Arial, sans-serif" font-size="64" font-weight="700">Competition Portfolio</text>
+  <text x="760" y="500" fill="#86efac" font-family="Geist, Arial, sans-serif" font-size="34">Research Challenge & Analytics Finals</text>
+</svg>
