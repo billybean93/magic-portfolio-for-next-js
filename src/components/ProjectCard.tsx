@@ -2,7 +2,6 @@
 
 import {
   AvatarGroup,
-  Carousel,
   Column,
   Flex,
   Heading,
@@ -10,6 +9,7 @@ import {
   SmartLink,
   Text,
 } from "@once-ui-system/core";
+import { InstantCarousel } from "@/components/InstantCarousel";
 
 interface ProjectCardProps {
   href: string;
@@ -44,7 +44,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Column fillWidth gap="m">
-      <Carousel
+      <InstantCarousel
         sizes="(max-width: 960px) 100vw, 960px"
         aspectRatio="16 / 9"
         items={images.map((image, index) => {

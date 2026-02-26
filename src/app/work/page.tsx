@@ -7,11 +7,11 @@ import {
   Row,
   Text,
   Line,
-  Carousel,
   Media,
 } from "@once-ui-system/core";
 import { baseURL, about, person, work, documentCategories, documents } from "@/resources";
 import { Projects } from "@/components/work/Projects";
+import { InstantCarousel } from "@/components/InstantCarousel";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -64,7 +64,7 @@ export default function Work() {
         <Heading as="h2" variant="heading-strong-l">
           Project Highlights
         </Heading>
-        <Carousel
+        <InstantCarousel
           aspectRatio="16 / 9"
           sizes="(max-width: 960px) 100vw, 960px"
           items={allProjects.map((project) => ({
