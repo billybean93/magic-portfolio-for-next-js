@@ -22,7 +22,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/TODO-update-linkedin",
+    link: "https://www.linkedin.com/in/ngoc-dino-nguyen/",
     essential: true,
   },
   {
