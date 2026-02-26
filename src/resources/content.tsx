@@ -6,10 +6,10 @@ const person: Person = {
   lastName: "Nguyen Phan Hong",
   name: "Nguyen Phan Hong Ngoc",
   role: "Investment Analyst (VC/PE Track)",
-  avatar: "/images/branding/avatar-ngoc.png",
+  avatar: "/images/branding/avatar-ngoc.jpeg",
   email: "nphongngocc@gmail.com",
   location: "Asia/Ho_Chi_Minh",
-  languages: ["English (IELTS 7.0)", "Vietnamese", "Chinese (Elementary)"],
+  languages: ["English (Fluent)", "Vietnamese", "Chinese (Elementary)"],
 };
 
 const newsletter: Newsletter = {

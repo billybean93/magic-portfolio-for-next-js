@@ -124,6 +124,24 @@ export default async function Project({
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <CustomMDX source={post.content} />
       </Column>
+      {post.metadata.deliverables && post.metadata.deliverables.length > 0 && (
+        <Column maxWidth="xs" fillWidth gap="12">
+          <Heading as="h2" variant="heading-strong-l">
+            File Access
+          </Heading>
+          <Column as="ul" gap="8" paddingLeft="20">
+            {post.metadata.deliverables.map((file) => (
+              <Text as="li" key={file.href} variant="body-default-m">
+                <SmartLink href={file.href}>
+                  {file.title}
+                  {file.type ? ` (${file.type.toUpperCase()})` : ""}
+                  {typeof file.sizeMB === "number" ? ` - ${file.sizeMB} MB` : ""}
+                </SmartLink>
+              </Text>
+            ))}
+          </Column>
+        </Column>
+      )}
       <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
         <Heading as="h2" variant="heading-strong-xl" marginBottom="24">

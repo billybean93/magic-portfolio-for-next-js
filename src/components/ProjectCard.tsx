@@ -19,7 +19,6 @@ interface ProjectCardProps {
   content: string;
   description: string;
   avatars: { src: string }[];
-  link: string;
   category?: "Industry Research" | "Financial Modeling" | "Academic Report" | "Competition";
   deliverablesCount?: number;
   slideCaptions?: string[];
@@ -37,7 +36,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   content,
   description,
   avatars,
-  link,
   category,
   deliverablesCount = 0,
   slideCaptions = [],
@@ -159,26 +157,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 ))}
               </Column>
             )}
-            <Flex gap="24" wrap>
-              {content?.trim() && (
-                <SmartLink
-                  suffixIcon="arrowRight"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={href}
-                >
-                  <Text variant="body-default-s">Read case study</Text>
-                </SmartLink>
-              )}
-              {link && (
-                <SmartLink
-                  suffixIcon="arrowUpRightFromSquare"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={link}
-                >
-                  <Text variant="body-default-s">View project</Text>
-                </SmartLink>
-              )}
-            </Flex>
+            {content?.trim() && (
+              <SmartLink
+                suffixIcon="arrowRight"
+                style={{ margin: "0", width: "fit-content" }}
+                href={href}
+              >
+                <Text variant="body-default-s">Read case study</Text>
+              </SmartLink>
+            )}
           </Column>
         )}
       </Flex>
