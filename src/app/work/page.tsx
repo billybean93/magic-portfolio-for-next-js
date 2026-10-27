@@ -39,7 +39,7 @@ export default function Work() {
     const base = document.href.split("/").pop();
     if (!base || !base.endsWith(".pdf")) return null;
     const folder = previewDirByCategory[document.category];
-    return `/images/previews/${folder}/${base.replace(".pdf", ".png")}`;
+    return `/images/previews/${folder}/${base.replace(".pdf", ".jpg")}`;
   };
 
   return (
